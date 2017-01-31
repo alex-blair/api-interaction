@@ -12,13 +12,12 @@ A GET request to this endpoint returns a JSON response containing source text in
 
 {
   "source": "Te wahie ka waia mo takurua, te kai ka mahia mo tau.",
-  "translation": "Firewood%20is sought for winter, food is laboured after for the year.\n\nMeaning: Be usefully employed."
+  "translation": "Firewood is sought for winter, food is laboured after for the year.\n\nMeaning: Be usefully employed."
 }
 
 The translations and accompanying comments were formatted to JSON from "Transactions and Proceedings of the Royal Society of New Zealand 1868-1961", particularly a work written in 1879 and hosted here: http://rsnz.natlib.govt.nz/volume/rsnz_12/rsnz_12_00_001250.html. It seems to be relatively respectful in its tone, but should be considered a product of its time.
 
 //Questions
-- how to include a space in the url?
 */
 
 //Highlevel plan of attack
@@ -42,22 +41,21 @@ The translations and accompanying comments were formatted to JSON from "Transact
 
 //4. Keep layout simple.  Use Skeleton Framework.
 
-$.ajaxSetup({
+// document.addEventListener('DOMContentLoaded', startGame)
+
+
+$.ajax({
   url: 'https://eda-te-reo.herokuapp.com/api/translate',
   type: 'GET',
-  dataType: 'json)',
-  data: {"source": 'value1', "translation": 'value2' },
+  dataType: 'json',
+  data: {"word": input },
 })
-.done(function() {
-  console.log("success");
-})
-.fail(function() {
-  console.log("error");
-})
-.always(function() {
-  console.log("complete");
-});
-
-$.ajaxSend(function(event, xhr, settings) {
-  /* stuff to do before an AJAX request is sent */;
-});
+  .done(function() {
+    console.log("success");
+  })
+  .fail(function() {
+    console.log("error");
+  })
+  .always(function() {
+    console.log("complete");
+  });
