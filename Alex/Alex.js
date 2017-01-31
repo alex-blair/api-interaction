@@ -2,9 +2,9 @@
 $(document).ready(function() {
 
   // Attach a submit handler to the form:
-  $("#form").submit(function(e) {
+  $("#form").submit(function(event) {
     // Stop form from submitting normally
-    e.preventDefault()
+    event.preventDefault()
     // Get some values from elements on the page:
     // 1 Return the value attribute of #engligh-text i.e. the text we want to translate:
     let textToTranslate = $("#form").find("#english-text").val()
