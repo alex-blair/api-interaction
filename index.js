@@ -59,3 +59,9 @@ $.ajax({
   .always(function() {
     console.log("complete");
   });
+.fail(function() {
+  console.log("error");
+})
+.always(function() {
+  console.log("complete");
+});
