@@ -4,6 +4,8 @@ $(document).ready(function() {
     event.preventDefault()
     let textToTranslate = $("#english-text").val()
     let url = "https://eda-te-reo.herokuapp.com/api/translate?word=" + textToTranslate
+
+    // AJAX API Call
     $.ajax({
       url: url,
       type: 'GET',

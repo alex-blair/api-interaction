@@ -12,9 +12,6 @@ $.ajax({
     response.push(data);
   }
 })
-// .done(function() {
-//   console.log("success". res);
-// })
 .fail(function() {
   console.log("error", err);
 })
