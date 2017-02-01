@@ -11,8 +11,8 @@ $(document).ready(function() {
         if(data.includes('Error')) {
           handleError(data)
         } else {
-          document.getElementByID("list").innerHTML = data;
-          // $("#result").html(data);
+          // document.getElementByID("result").innerHTML = data;
+          $("#result").html(data);
         }
       }
     })
