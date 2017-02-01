@@ -18,3 +18,17 @@ $.ajax({
 .always(function() {
   console.log("complete");
 });
+
+
+let firstChild = document.getElementById("prev").firstChild;
+if (firstChild) {
+  $("p").addClass("hide");
+}
+
+
+$("#twitter-share-button").click(function(event) {
+  event.preventDefault()
+
+}
+
+<a class="twitter-share-button" href="https://twitter.com/share" data-size="large" data-text="translated text?" data-hashtags="#EDA #WEEK7 #TRANLATED" data-via="twitterdev" data-related="twitterapi,twitter">Tweet</a>
