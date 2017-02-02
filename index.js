@@ -13,7 +13,6 @@ $(document).ready(function() {
         if(data.includes('specify')) {
           handleError(data)
         } else {
-          // document.getElementByID("result").innerHTML = data;
           var tweetString = textToTranslate + " = " + data + " " + "#EDA #learnMaori #translationapp";
           tweetString = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweetString).replace(/%20/g,'+');
           $("#result").html(textToTranslate + " = " + data);
