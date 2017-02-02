@@ -16,9 +16,17 @@
     <!-- Scripts - jQuery, Javascript, Twitter-->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
-    <script async src="https:////platform.twitter.com/widgets.js" charset="utf-8"></script>
     <!-- Favicon-->
 </head>
+<div>
+    <div clas="container">
+        <div class="row title-box">
+            <div class="four columns offset-by-four">
+                <h1>Iritihia i English</h1>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="translate-section">
     <div class="container">
         <div class="row input-box">
@@ -33,15 +41,17 @@
             <div class="eight columns offset-by-two">
                 <div id="result">
                 </div>
+                <div>
+                    <h5>Previous translations</h5>
+                    <div id="prev">
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row twitter-box">
-            <div class="eight columns offset-by-two">
+            <div class="eight columns offset-by-two" id="twitter-wrapper">
 
-                <a class="twitter-share-button" href="https://twitter.com/share" data-size="large" data-text="translated text?" data-hashtags="#EDA #WEEK7 #TRANLATED" data-via="twitterdev" data-related="twitterapi,twitter">Tweet</a>
-                <!--
-                /* From here https://dev.twitter.com/web/tweet-button/parameters */
-                <button id="twitter-button"><a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false" text="Translated">Tweet</a></button> -->
+                <button><a id="tweet" href="https://twitter.com/intent/tweet?text=" target="_blank" data-show-count="false" text="Translated">Tweet <i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></button>
 
             </div>
         </div>

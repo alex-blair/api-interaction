@@ -1,25 +1,41 @@
 /*Add padding to the main boxes and sections  */
+.title-box {
+  text-align: center;
+  padding-top: 4rem;
+}
+
+.input-box {
+
+}
 
 .translate-section {
   text-align: center;
   padding: 3rem;
 }
 
-.input-box {
-  padding-top: 4rem;
-}
-
 .result-box {
-  padding: 3rem;
+
 }
 
 .twitter-box {
   padding: 3rem;
 }
 
+
+/*Style text*/
+p {
+  margin-bottom: 5px;
+}
+
+h5 {
+  padding: 10px;
+  margin-bottom: 0;
+}
+
 /*Stlying links*/
 a:link {
   text-decoration: none;
+  font-size:1.2em;
 }
 
 a:-webkit-any-link {
@@ -34,4 +50,15 @@ a:-webkit-any-link {
 
 a#b.btn {
 height: 40px;
+}
+
+/* Hide most recent translation from "previous translations" section */
+
+p:last-child {
+  color: blue;
+  display: none;
+}
+
+#twitter-start {
+  display: none;
 }

@@ -2,6 +2,7 @@ $(document).ready(function() {
   $("#form").submit(function(event) {
     event.preventDefault()
     let textToTranslate = $("#form").find("#english-text").val();
+    let textToTranslate = $("#english-text").val()
     let url = "https://eda-te-reo.herokuapp.com/api/translate?word=" + textToTranslate
 
     // AJAX API Call
@@ -10,11 +11,14 @@ $(document).ready(function() {
       type: 'GET',
       error: handleError,
       success: function(data) {
-        if(data.includes('Error')) {
+        if(data.includes('specify')) {
           handleError(data)
         } else {
-          // document.getElementByID("result").innerHTML = data;
-          $("#result").html(data);
+          var tweetString = textToTranslate + " = " + data + " " + "#EDA #learnMaori #translationapp";
+          tweetString = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweetString).replace(/%20/g,'+');
+          $("#result").html(textToTranslate + " = " + data);
+          $("#prev").append("<p>" + textToTranslate + " = " + data + "</p>");
+          $("#tweet").attr('href',tweetString)
         }
       }
     })
@@ -22,5 +26,5 @@ $(document).ready(function() {
 })
 
 let handleError = function (err) {
-  $("#result").html("Oops! " + err);
+  $("#result").html("The Maori translation of nothing is still nothing");
 }
