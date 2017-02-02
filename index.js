@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $("#form").submit(function(event) {
     event.preventDefault()
-    let textToTranslate = $("#form").find("#english-text").val()
+    let textToTranslate = $("#form").find("#english-text").val();
     let url = "https://eda-te-reo.herokuapp.com/api/translate?word=" + textToTranslate
 
     // AJAX API Call
