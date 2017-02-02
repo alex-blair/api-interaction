@@ -26,5 +26,5 @@ $(document).ready(function() {
 })
 
 let handleError = function (err) {
-  $("#result").html("The Maori translation of nothing is still nothing");
+  $("#result").html("The Maori translation of nothing is kahore");
 }
