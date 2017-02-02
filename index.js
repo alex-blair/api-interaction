@@ -14,12 +14,11 @@ $(document).ready(function() {
           handleError(data)
         } else {
           // document.getElementByID("result").innerHTML = data;
-          // var tweetString = textToTranslate + " = " + data;
+          var tweetString = textToTranslate + " = " + data;
+          tweetString = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweetString).replace(/%20/g,'+');
           $("#result").html(textToTranslate + " = " + data);
           $("#prev").append("<p>" + textToTranslate + " = " + data + "</p>");
-          $("#twitter-wrapper").html(
-            '<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=' + data + '" data-size="large" text="cat2">Tweet</a>'
-          )
+          $("#tweet").attr('href',tweetString)
         }
       }
     })
